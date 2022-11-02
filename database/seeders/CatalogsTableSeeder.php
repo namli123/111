@@ -33,7 +33,7 @@ class CatalogsTableSeeder extends Seeder
         return $name;
     }
     public function generateRandomgametype() {
-        $Gametype = ['行動',''];
+        $Gametype = ['行動','xxx'];
         return $Gametype[rand(0, count($Gametype)-1)];
 
     }

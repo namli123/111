@@ -20,7 +20,28 @@
             }
         </style>
     </head>
+    <div>
+        <a href="{{url('catalogs/')}}">catalogs</a>
+    </div>
     <body class="antialiased">
-        全部廠商資料的視圖(view)
+       <h1>全部廠商資料的視圖(view)</h1>
+       <table>
+            <tr>
+                <th>編號</th>
+                <th>游戲場商公司</th>
+                <th>直本類</th>
+                <th>成立日期</th>
+                <th>國家</th>
+            </tr>
+        @foreach($manufacturers as $manufacturer)
+            <tr>
+                <td>{{ $manufacturer->id }}</td>
+                <td>{{ $manufacturer->name }}</td>
+                <td>{{ $manufacturer->capital }}</td>
+                <td>{{ $manufacturer->found_at }}</td>
+                <td>{{ $manufacturer->national }}</td>
+            </tr>
+        @endforeach
+    </table>          
     </body>
 </html>

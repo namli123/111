@@ -3,10 +3,15 @@
 namespace App\Http\Controllers;
 
 use Dflydev\DotAccessData\Data;
+use App\Models\Catalog;
 use Illuminate\Http\Request;
 
 class CatalogsController extends Controller
 {
+    public function index(){
+        $catalogs = catalog::all(); // 撈出所有資料
+        return view('catalogs.index', ['catalogs' => $catalogs]);
+    }
     /*public function index()
     {
         $catalogs = catalog::all();

@@ -21,6 +21,30 @@
         </style>
     </head>
     <body class="antialiased">
-        全部遊戲資料的視圖(view)
+        <h1>全部遊戲資料的視圖(view)</h1>
+        <table>
+            <tr>
+                <th>編號</th>
+                <th>名稱</th>
+                <th>廠商騙號</th>
+                <th>價格</th>
+                <th>評價</th>
+                <th>發行日期</th>
+                <th>營收</th>
+                <th>游戲種類</th>
+            </tr>
+        @foreach($catalogs as $catalog)
+            <tr>
+                <td>{{ $catalog->id }}</td>
+                <td>{{ $catalog->name }}</td>
+                <td>{{ $catalog->mid }}</td>
+                <td>{{ $catalog->price }}</td>
+                <td>{{ $catalog->evaluation }}</td>
+                <td>{{ $catalog->issue_date }}</td>
+                <td>{{ $catalog->revenue }}</td>
+                <td>{{ $catalog->game_type }}</td>
+            </tr>
+        @endforeach
+    </table>        
     </body>
 </html>

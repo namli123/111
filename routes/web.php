@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CatalogsController;
+use App\Http\Controllers\ManufacturersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('catalogs',[CatalogsController::class,'index'])->name('catalogs.index');
+Route::get('catalogs',[CatalogsController::class,'index'])->name('catalogs.index');
+Route::get('manufacturers',[ManufacturersController::class,'index'])->name('manufacturers.index');
